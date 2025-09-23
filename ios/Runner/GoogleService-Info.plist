@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAFEQ3zp-T0W5HPSBoHwIzecimG9rVm0ms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>130876357628</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.sportstipsapplication</string>
+	<key>PROJECT_ID</key>
+	<string>sports-tips-application-0p9kkt</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sports-tips-application-0p9kkt.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:130876357628:ios:3758bcf286448a35fa9079</string>
+</dict>
+</plist>

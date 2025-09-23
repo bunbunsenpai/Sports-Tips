@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "130876357628",
+    "project_id": "sports-tips-application-0p9kkt",
+    "storage_bucket": "sports-tips-application-0p9kkt.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130876357628:android:a853a5d134ac39c3fa9079",
+        "android_client_info": {
+          "package_name": "com.mycompany.sportstipsapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1mKKigsiGKjN_K9EWzg3R8cwB0rQr3kE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
