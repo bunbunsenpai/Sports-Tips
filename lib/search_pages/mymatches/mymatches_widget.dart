@@ -51,6 +51,7 @@ class _MymatchesWidgetState extends State<MymatchesWidget> {
           child: Stack(
             children: [
               SingleChildScrollView(
+                primary: false,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,

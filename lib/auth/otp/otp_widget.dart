@@ -180,6 +180,9 @@ class _OtpWidgetState extends State<OtpWidget> {
                                 if (phoneVerifiedUser == null) {
                                   return;
                                 }
+
+                                context.goNamedAuth(
+                                    MAINpage1Widget.routeName, context.mounted);
                               },
                               autovalidateMode: AutovalidateMode.disabled,
                               validator: _model.pinCodeControllerValidator
