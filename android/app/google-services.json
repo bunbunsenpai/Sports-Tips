@@ -12,7 +12,28 @@
           "package_name": "com.mycompany.sportstipsapplication"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "130876357628-cu8t1hhk0ut3hppgrjg2dpphvsqegtas.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.sportstipsapplication",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "130876357628-u213ag4j5jk17ph181q22gudl1d92oqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.sportstipsapplication",
+            "certificate_hash": "e35ed478a2fe9674907ffa99b0cca5761c53267b"
+          }
+        },
+        {
+          "client_id": "130876357628-sh8srh0vhikrggcigh7a21q1p8bm33s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA1mKKigsiGKjN_K9EWzg3R8cwB0rQr3kE"
@@ -20,7 +41,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130876357628-sh8srh0vhikrggcigh7a21q1p8bm33s5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "130876357628-fp2eok75evb8b24gd0k91qm60gsnjl96.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.sportstipsapplication"
+              }
+            }
+          ]
         }
       }
     }

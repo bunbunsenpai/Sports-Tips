@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'profileedit_widget.dart' show ProfileeditWidget;
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,7 @@ class ProfileeditModel extends FlutterFlowModel<ProfileeditWidget> {
 
   bool isDataUploading_uploadData1mc = false;
   FFUploadedFile uploadedLocalFile_uploadData1mc =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
+      FFUploadedFile(bytes: Uint8List.fromList([]), originalFilename: '');
   String uploadedFileUrl_uploadData1mc = '';
 
   // State field(s) for yourName widget.

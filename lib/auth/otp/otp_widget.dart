@@ -98,33 +98,6 @@ class _OtpWidgetState extends State<OtpWidget> {
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 5.0),
-                                child: Text(
-                                  'OTP',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                ),
-                              ),
-                            ),
                             PinCodeTextField(
                               autoDisposeControllers: false,
                               appContext: context,
@@ -156,33 +129,33 @@ class _OtpWidgetState extends State<OtpWidget> {
                               focusNode: _model.pinCodeFocusNode,
                               enablePinAutofill: true,
                               errorTextSpace: 16.0,
-                              showCursor: false,
+                              showCursor: true,
                               cursorColor: FlutterFlowTheme.of(context).primary,
                               obscureText: false,
                               keyboardType: TextInputType.number,
                               pinTheme: PinTheme(
-                                fieldHeight: 44.0,
-                                fieldWidth: 44.0,
-                                borderWidth: 2.0,
+                                fieldHeight: 35.0,
+                                fieldWidth: 35.0,
+                                borderWidth: 0.0,
                                 borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(12.0),
-                                  bottomRight: Radius.circular(12.0),
-                                  topLeft: Radius.circular(12.0),
-                                  topRight: Radius.circular(12.0),
+                                  bottomLeft: Radius.circular(5.0),
+                                  bottomRight: Radius.circular(5.0),
+                                  topLeft: Radius.circular(5.0),
+                                  topRight: Radius.circular(5.0),
                                 ),
                                 shape: PinCodeFieldShape.box,
                                 activeColor:
-                                    FlutterFlowTheme.of(context).alternate,
+                                    FlutterFlowTheme.of(context).secondary,
                                 inactiveColor:
-                                    FlutterFlowTheme.of(context).alternate,
+                                    FlutterFlowTheme.of(context).primary,
                                 selectedColor: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 activeFillColor: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 inactiveFillColor: FlutterFlowTheme.of(context)
                                     .primaryBackground,
-                                selectedFillColor: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                selectedFillColor:
+                                    FlutterFlowTheme.of(context).alternate,
                               ),
                               controller: _model.pinCodeController,
                               onChanged: (_) {},
@@ -306,13 +279,12 @@ class _OtpWidgetState extends State<OtpWidget> {
                                     return;
                                   }
 
-                                  context.pushNamedAuth(
-                                      MAINpage1Widget.routeName,
+                                  context.goNamedAuth(MAINpage1Widget.routeName,
                                       context.mounted);
                                 },
                                 text: 'LOG IN',
                                 options: FFButtonOptions(
-                                  width: MediaQuery.sizeOf(context).width * 0.6,
+                                  width: double.infinity,
                                   height: 45.0,
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
@@ -323,7 +295,7 @@ class _OtpWidgetState extends State<OtpWidget> {
                                       .bodyLarge
                                       .override(
                                         font: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyLarge
@@ -331,14 +303,15 @@ class _OtpWidgetState extends State<OtpWidget> {
                                         ),
                                         color: FlutterFlowTheme.of(context)
                                             .secondary,
+                                        fontSize: 14.0,
                                         letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w600,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .fontStyle,
                                       ),
                                   elevation: 0.0,
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  borderRadius: BorderRadius.circular(5.0),
                                 ),
                               ),
                             ),

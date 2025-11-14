@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -96,8 +97,8 @@ class _ProfileeditWidgetState extends State<ProfileeditWidget> {
                               color: FlutterFlowTheme.of(context).secondary,
                               size: 24.0,
                             ),
-                            onPressed: () {
-                              print('IconButton pressed ...');
+                            onPressed: () async {
+                              context.pushNamed(MAINpage1Widget.routeName);
                             },
                           ),
                           Row(
@@ -273,7 +274,9 @@ class _ProfileeditWidgetState extends State<ProfileeditWidget> {
                       final selectedMedia =
                           await selectMediaWithSourceBottomSheet(
                         context: context,
-                        imageQuality: 80,
+                        maxWidth: 50.00,
+                        maxHeight: 50.00,
+                        imageQuality: 37,
                         allowPhoto: true,
                         backgroundColor:
                             FlutterFlowTheme.of(context).primaryBackground,
@@ -301,6 +304,7 @@ class _ProfileeditWidgetState extends State<ProfileeditWidget> {
                                     height: m.dimensions?.height,
                                     width: m.dimensions?.width,
                                     blurHash: m.blurHash,
+                                    originalFilename: m.originalFilename,
                                   ))
                               .toList();
 

@@ -84,7 +84,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
                     icon: Icon(
                       Icons.home_outlined,
                       color: FlutterFlowTheme.of(context).secondary,
-                      size: 28.0,
+                      size: 35.0,
                     ),
                     onPressed: () async {
                       context.pushNamed(MAINpage1Widget.routeName);
@@ -98,7 +98,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
                     icon: Icon(
                       Icons.list,
                       color: FlutterFlowTheme.of(context).secondary,
-                      size: 28.0,
+                      size: 35.0,
                     ),
                     onPressed: () {
                       print('IconButton pressed ...');
@@ -112,7 +112,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
                     icon: Icon(
                       Icons.person_outlined,
                       color: FlutterFlowTheme.of(context).secondary,
-                      size: 28.0,
+                      size: 35.0,
                     ),
                     onPressed: () async {
                       context.pushNamed(ProfileWidget.routeName);

@@ -94,7 +94,6 @@ dependencies:
   sign_in_with_apple: 7.0.1
   sign_in_with_apple_platform_interface: 2.0.0
   sign_in_with_apple_web: 3.0.0
-  smooth_page_indicator: 1.1.0
   sqflite: 2.3.3+1
   sqflite_common: 2.5.4+3
   stream_transform: 2.1.0
@@ -123,10 +122,23 @@ dependency_overrides:
   uuid: ^4.0.0
 
 dev_dependencies:
+  flutter_launcher_icons: 0.13.1
   flutter_lints: 4.0.0
+  image: 4.2.0
   lints: 4.0.0
   flutter_test:
     sdk: flutter
+
+
+flutter_launcher_icons:
+  android: 'launcher_icon'
+  ios: true
+  web:
+    generate: true
+  image_path: 'assets/images/app_launcher_icon.jpeg'
+  adaptive_icon_background: '#aee21e'
+  adaptive_icon_foreground: 'assets/images/adaptive_foreground_icon.jpeg'
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -149,6 +161,19 @@ flutter:
     - assets/pdfs/
     - assets/jsons/
 
+  fonts:
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
+    - family: Soc
+      fonts:
+        - asset: assets/fonts/soc.ttf
+    - family: Sss
+      fonts:
+        - asset: assets/fonts/sss.ttf
+    - family: Fff
+      fonts:
+        - asset: assets/fonts/fff.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

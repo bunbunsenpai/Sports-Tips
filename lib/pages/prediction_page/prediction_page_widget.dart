@@ -132,10 +132,9 @@ class _PredictionPageWidgetState extends State<PredictionPageWidget> {
                   width: double.infinity,
                   height: 200.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
                     borderRadius: BorderRadius.circular(8.0),
                     border: Border.all(
-                      color: FlutterFlowTheme.of(context).alternate,
+                      color: FlutterFlowTheme.of(context).secondary,
                       width: 2.0,
                     ),
                   ),
@@ -152,21 +151,21 @@ class _PredictionPageWidgetState extends State<PredictionPageWidget> {
                             'Tips Detail',
                           ),
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.russoOne(
+                              FlutterFlowTheme.of(context).labelLarge.override(
+                                    font: GoogleFonts.montserrat(
                                       fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
+                                          .labelLarge
                                           .fontWeight,
                                       fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
+                                          .labelLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
-                                        .titleLarge
+                                        .labelLarge
                                         .fontWeight,
                                     fontStyle: FlutterFlowTheme.of(context)
-                                        .titleLarge
+                                        .labelLarge
                                         .fontStyle,
                                   ),
                         ),
@@ -194,10 +193,14 @@ class _PredictionPageWidgetState extends State<PredictionPageWidget> {
                           onPressed: () async {
                             context.pushNamed(MAINpage1Widget.routeName);
                           },
-                          text: 'Go Home',
+                          text: 'Back to Home',
+                          icon: Icon(
+                            Icons.home,
+                            size: 15.0,
+                          ),
                           options: FFButtonOptions(
-                            width: 230.0,
-                            height: 50.0,
+                            width: double.infinity,
+                            height: 45.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
@@ -224,7 +227,7 @@ class _PredictionPageWidgetState extends State<PredictionPageWidget> {
                               color: Colors.transparent,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(40.0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                         ),
                       ],

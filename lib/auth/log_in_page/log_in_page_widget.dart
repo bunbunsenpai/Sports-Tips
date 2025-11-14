@@ -61,7 +61,7 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Your_paragraph_text_(1).png',
+                'assets/images/0af82e79f82565dc8c08bbf8f7b95aa129b7f599.jpg',
               ).image,
             ),
           ),
@@ -113,7 +113,7 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 75.0),
+                                    0.0, 0.0, 0.0, 25.0),
                                 child: Text(
                                   'Hello Again',
                                   style: FlutterFlowTheme.of(context)
@@ -129,6 +129,8 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                   .displaySmall
                                                   .fontStyle,
                                         ),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FlutterFlowTheme.of(context)
                                             .displaySmall
@@ -157,7 +159,9 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        fontSize: 16.0,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 14.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         fontStyle: FlutterFlowTheme.of(context)
@@ -169,55 +173,73 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                             ),
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Align(
-                                        alignment:
-                                            AlignmentDirectional(-1.0, -1.0),
-                                        child: Container(
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  1.0,
-                                          child: Autocomplete<String>(
-                                            initialValue:
-                                                TextEditingValue(text: 'India'),
-                                            optionsBuilder: (textEditingValue) {
-                                              if (textEditingValue.text == '') {
-                                                return const Iterable<
-                                                    String>.empty();
-                                              }
-                                              return functions
-                                                  .countryList()
-                                                  .where((option) {
-                                                final lowercaseOption =
-                                                    option.toLowerCase();
-                                                return lowercaseOption.contains(
-                                                    textEditingValue.text
-                                                        .toLowerCase());
-                                              });
-                                            },
-                                            optionsViewBuilder:
-                                                (context, onSelected, options) {
-                                              return AutocompleteOptionsList(
-                                                textFieldKey: _model.indiaKey,
-                                                textController:
-                                                    _model.indiaTextController!,
-                                                options: options.toList(),
-                                                onSelected: onSelected,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .montserrat(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 6.0, 0.0, 12.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Align(
+                                          alignment:
+                                              AlignmentDirectional(-1.0, -1.0),
+                                          child: Container(
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                1.0,
+                                            child: Autocomplete<String>(
+                                              initialValue: TextEditingValue(
+                                                  text: 'India'),
+                                              optionsBuilder:
+                                                  (textEditingValue) {
+                                                if (textEditingValue.text ==
+                                                    '') {
+                                                  return const Iterable<
+                                                      String>.empty();
+                                                }
+                                                return functions
+                                                    .countryList()
+                                                    .where((option) {
+                                                  final lowercaseOption =
+                                                      option.toLowerCase();
+                                                  return lowercaseOption
+                                                      .contains(textEditingValue
+                                                          .text
+                                                          .toLowerCase());
+                                                });
+                                              },
+                                              optionsViewBuilder: (context,
+                                                  onSelected, options) {
+                                                return AutocompleteOptionsList(
+                                                  textFieldKey: _model.indiaKey,
+                                                  textController: _model
+                                                      .indiaTextController!,
+                                                  options: options.toList(),
+                                                  onSelected: onSelected,
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .montserrat(
+                                                              fontWeight:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -229,24 +251,28 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                           ),
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                textHighlightStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .montserrat(
+                                                  textHighlightStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .montserrat(
+                                                              fontWeight:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondary,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -258,54 +284,244 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                           ),
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondary,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                elevation: 4.0,
-                                                optionBackgroundColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                optionHighlightColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
-                                                maxHeight: 200.0,
-                                              );
-                                            },
-                                            onSelected: (String selection) {
-                                              safeSetState(() =>
-                                                  _model.indiaSelectedOption =
-                                                      selection);
-                                              FocusScope.of(context).unfocus();
-                                            },
-                                            fieldViewBuilder: (
-                                              context,
-                                              textEditingController,
-                                              focusNode,
-                                              onEditingComplete,
-                                            ) {
-                                              _model.indiaFocusNode = focusNode;
+                                                  elevation: 4.0,
+                                                  optionBackgroundColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primaryBackground,
+                                                  optionHighlightColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .secondaryBackground,
+                                                  maxHeight: 200.0,
+                                                );
+                                              },
+                                              onSelected: (String selection) {
+                                                safeSetState(() =>
+                                                    _model.indiaSelectedOption =
+                                                        selection);
+                                                FocusScope.of(context)
+                                                    .unfocus();
+                                              },
+                                              fieldViewBuilder: (
+                                                context,
+                                                textEditingController,
+                                                focusNode,
+                                                onEditingComplete,
+                                              ) {
+                                                _model.indiaFocusNode =
+                                                    focusNode;
 
-                                              _model.indiaTextController =
-                                                  textEditingController;
-                                              return TextFormField(
-                                                key: _model.indiaKey,
-                                                controller:
-                                                    textEditingController,
-                                                focusNode: focusNode,
-                                                onEditingComplete:
-                                                    onEditingComplete,
+                                                _model.indiaTextController =
+                                                    textEditingController;
+                                                return TextFormField(
+                                                  key: _model.indiaKey,
+                                                  controller:
+                                                      textEditingController,
+                                                  focusNode: focusNode,
+                                                  onEditingComplete:
+                                                      onEditingComplete,
+                                                  autofocus: false,
+                                                  obscureText: false,
+                                                  decoration: InputDecoration(
+                                                    isDense: true,
+                                                    labelText: ' ',
+                                                    enabledBorder:
+                                                        OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                        color:
+                                                            Color(0x00000000),
+                                                        width: 1.0,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    focusedBorder:
+                                                        OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                        color:
+                                                            Color(0x00000000),
+                                                        width: 1.0,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    errorBorder:
+                                                        OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .error,
+                                                        width: 1.0,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    focusedErrorBorder:
+                                                        OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .error,
+                                                        width: 1.0,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    filled: true,
+                                                    fillColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts
+                                                            .montserrat(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondary,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                  cursorColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primaryText,
+                                                  enableInteractiveSelection:
+                                                      true,
+                                                  validator: _model
+                                                      .indiaTextControllerValidator
+                                                      .asValidator(context),
+                                                );
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ].divide(SizedBox(width: 0.0)),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(-1.0, -1.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 12.0, 0.0, 5.0),
+                                child: Text(
+                                  'Mobile Number',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.w500,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w500,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 6.0, 0.0, 12.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 12.0, 0.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          valueOrDefault<String>(
+                                            functions.dialCode(_model
+                                                .indiaTextController.text),
+                                            '+91',
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.montserrat(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondary,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        ),
+                                        SizedBox(
+                                          height: 25.0,
+                                          child: VerticalDivider(
+                                            thickness: 2.0,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondary,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Align(
+                                            alignment: AlignmentDirectional(
+                                                -1.0, -1.0),
+                                            child: Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              child: TextFormField(
+                                                controller: _model
+                                                    .mobileNumberTextController,
+                                                focusNode: _model
+                                                    .mobileNumberFocusNode,
                                                 autofocus: false,
                                                 obscureText: false,
                                                 decoration: InputDecoration(
@@ -358,10 +574,6 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                             8.0),
                                                   ),
                                                   filled: true,
-                                                  fillColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primaryBackground,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -370,7 +582,7 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                           font: GoogleFonts
                                                               .montserrat(
                                                             fontWeight:
-                                                                FontWeight.bold,
+                                                                FontWeight.w600,
                                                             fontStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -382,7 +594,7 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                               .secondary,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                              FontWeight.w600,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -395,204 +607,14 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                                 enableInteractiveSelection:
                                                     true,
                                                 validator: _model
-                                                    .indiaTextControllerValidator
+                                                    .mobileNumberTextControllerValidator
                                                     .asValidator(context),
-                                              );
-                                            },
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
+                                      ].divide(SizedBox(width: 0.0)),
                                     ),
-                                  ].divide(SizedBox(width: 0.0)),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 12.0, 0.0, 5.0),
-                                child: Text(
-                                  'Mobile Number',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 0.0, 12.0, 0.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        valueOrDefault<String>(
-                                          functions.dialCode(
-                                              _model.indiaTextController.text),
-                                          '+91',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.montserrat(
-                                                fontWeight: FontWeight.bold,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondary,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                      SizedBox(
-                                        height: 25.0,
-                                        child: VerticalDivider(
-                                          thickness: 2.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondary,
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: Align(
-                                          alignment:
-                                              AlignmentDirectional(-1.0, -1.0),
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context)
-                                                    .width *
-                                                1.0,
-                                            child: TextFormField(
-                                              controller: _model
-                                                  .mobileNumberTextController,
-                                              focusNode:
-                                                  _model.mobileNumberFocusNode,
-                                              autofocus: false,
-                                              obscureText: false,
-                                              decoration: InputDecoration(
-                                                isDense: true,
-                                                labelText: ' ',
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: Color(0x00000000),
-                                                    width: 1.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
-                                                ),
-                                                focusedBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: Color(0x00000000),
-                                                    width: 1.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
-                                                ),
-                                                errorBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 1.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
-                                                ),
-                                                focusedErrorBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 1.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
-                                                ),
-                                                filled: true,
-                                                fillColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font:
-                                                        GoogleFonts.montserrat(
-                                                      fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontWeight,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondary,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                              cursorColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              enableInteractiveSelection: true,
-                                              validator: _model
-                                                  .mobileNumberTextControllerValidator
-                                                  .asValidator(context),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
@@ -634,8 +656,8 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                 },
                                 text: 'GET OTP',
                                 options: FFButtonOptions(
-                                  width: MediaQuery.sizeOf(context).width * 0.6,
-                                  height: 45.0,
+                                  width: double.infinity,
+                                  height: 40.0,
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
@@ -645,7 +667,7 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                       .bodyLarge
                                       .override(
                                         font: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyLarge
@@ -653,14 +675,15 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                         ),
                                         color: FlutterFlowTheme.of(context)
                                             .secondary,
+                                        fontSize: 14.0,
                                         letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w600,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .fontStyle,
                                       ),
                                   elevation: 0.0,
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  borderRadius: BorderRadius.circular(5.0),
                                 ),
                               ),
                             ),
@@ -771,15 +794,6 @@ class _LogInPageWidgetState extends State<LogInPageWidget> {
                                     width: 25.0,
                                     height: 25.0,
                                     fit: BoxFit.fitWidth,
-                                  ),
-                                ),
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/Vector.png',
-                                    width: 25.0,
-                                    height: 25.0,
-                                    fit: BoxFit.fill,
                                   ),
                                 ),
                                 ClipRRect(

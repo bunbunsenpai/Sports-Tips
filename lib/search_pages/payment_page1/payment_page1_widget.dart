@@ -90,8 +90,8 @@ class _PaymentPage1WidgetState extends State<PaymentPage1Widget> {
                               color: FlutterFlowTheme.of(context).secondary,
                               size: 24.0,
                             ),
-                            onPressed: () {
-                              print('IconButton pressed ...');
+                            onPressed: () async {
+                              context.pushNamed(MAINpage1Widget.routeName);
                             },
                           ),
                           Row(

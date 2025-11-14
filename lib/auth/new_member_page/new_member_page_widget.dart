@@ -113,25 +113,22 @@ class _NewMemberPageWidgetState extends State<NewMemberPageWidget> {
                 height: double.infinity,
                 decoration: BoxDecoration(),
               ),
-              Opacity(
-                opacity: 0.15,
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.network(
-                        'https://images.unsplash.com/photo-1565287229352-a82dcc02585f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3ODcyOTZ8&ixlib=rb-4.1.0&q=80&w=1080',
-                      ).image,
-                    ),
+              Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: Image.asset(
+                      'assets/images/d1c73a547de040c6e1b27fb2ed49732bac64a897.jpg',
+                    ).image,
                   ),
-                  child: ClipRect(
-                    child: ImageFiltered(
-                      imageFilter: ImageFilter.blur(
-                        sigmaX: 8.0,
-                        sigmaY: 8.0,
-                      ),
+                ),
+                child: ClipRect(
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(
+                      sigmaX: 8.0,
+                      sigmaY: 8.0,
                     ),
                   ),
                 ),
@@ -140,7 +137,7 @@ class _NewMemberPageWidgetState extends State<NewMemberPageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(32.0, 80.0, 32.0, 60.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -160,6 +157,7 @@ class _NewMemberPageWidgetState extends State<NewMemberPageWidget> {
                                       .displayLarge
                                       .fontStyle,
                                 ),
+                                color: Colors.white,
                                 letterSpacing: 0.0,
                                 fontWeight: FlutterFlowTheme.of(context)
                                     .displayLarge
@@ -234,7 +232,7 @@ class _NewMemberPageWidgetState extends State<NewMemberPageWidget> {
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
                           FFButtonWidget(
@@ -269,7 +267,7 @@ class _NewMemberPageWidgetState extends State<NewMemberPageWidget> {
                                 color: Colors.white,
                                 width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
                         ].divide(SizedBox(height: 20.0)),
